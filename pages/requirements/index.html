@@ -6,7 +6,7 @@
     Judson Hartley
 </title>
 
-    <meta name="description" content="About the CSCI441 Project">
+    <meta name="description" content="CSCI441 Project Requirements">
 
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,10 +62,16 @@
             <nav class="toc">
                 <ol>
                     
-                    <li><a href="#about">About</a>
+                    <li><a href="#main-requirements">Main Requirements</a>
             		</li>
 
-                    <li><a href="#info">Info</a>
+                    <li><a href="#basic-hardware-module-requirements">Basic Hardware Module Requirements</a>
+            		</li>
+
+                    <li><a href="#sensor-hardware-module-requirements">Sensor Hardware Module Requirements</a>
+            		</li>
+
+                    <li><a href="#control-hardware-module-requirements">Control Hardware Module Requirements</a>
             		</li>
                 </ol>
             </nav>
@@ -73,17 +79,50 @@
     </div>
     <div class="md:col-start-2 md:col-end-5 markdown">
         <div class="prose prose-sm md:prose-base w-full max-w-fit flex-grow my-10">
-            <h2 id="about" tabindex="-1">About</h2>
-<p>I’m Judson Hartley, a senior at <a href="https://www.fhsu.edu/">FHSU</a>. I have too many hobbies and interests to count, and have worked in quite a few fields:</p>
+            <h1 id="csci441-project-requirements" tabindex="-1">CSCI441 Project Requirements</h1>
+<h2 id="main-requirements" tabindex="-1">Main Requirements</h2>
 <ul>
-<li>IT computer repair and networking, COMPTIA A+ certified 2001</li>
-<li>Automotive Repair, ASE Master Tech 2005, Porsche Technology Apprenticeship Program 2006</li>
-<li>U.S. Navy, Air Traffic Controller 2009-2016</li>
-<li>FAA Air Traffic Controller, Daytona Beach Control Tower, 2017-2022</li>
-<li>IT contracting for local businesses 2022-present</li>
+<li>Get Data</li>
+<li>Process Data</li>
+<li>Save Data</li>
+<li>Make decisions based on data</li>
+<li>Send control commands</li>
+<li>Execute commands</li>
 </ul>
-<h2 id="info" tabindex="-1">Info</h2>
-<p>This site is setup to show the proposal, progress, and conclusion of my FHSU CSCI441 project.</p>
+<h2 id="basic-hardware-module-requirements" tabindex="-1">Basic Hardware Module Requirements</h2>
+<ul>
+<li>Connect via Ethernet or WIFI</li>
+<li>Use a factory set ID for node deconfliction</li>
+<li>Blink to locate and basic errors led</li>
+<li>Use default network pin</li>
+<li>Default network settings</li>
+<li>Saveable user network settings</li>
+<li>DHCP</li>
+<li>DNS or IP addressing for MQTT server</li>
+</ul>
+<h2 id="sensor-hardware-module-requirements" tabindex="-1">Sensor Hardware Module Requirements</h2>
+<ul>
+<li>All Basic Requirements</li>
+<li>Standardized sensor reading values by type of reading i.e.: temperature, humidity, pressure, frequency, energy (watts), current.</li>
+<li>Ping or health check response</li>
+<li>Only sends data on value change</li>
+<li>Stateless system, listens for overall system restart message and sends all datapoints upon receipt with random delay.</li>
+<li>Nodes for specific data points
+<ul>
+<li>Basic psychrometric air data point (temperature, humidity, pressure)</li>
+<li>Refrigerant coil data point (inlet refrigerant temperature, outlet temperature, pressure, EEV setting)</li>
+<li>Air Quality data point (basic air data plus PM, CO2, VOC, etc.)</li>
+<li>Air Flow data point (measured air flow from fans, estimated flow from pressure differential, filter load or remaining life from pressure differential)</li>
+</ul>
+</li>
+</ul>
+<h2 id="control-hardware-module-requirements" tabindex="-1">Control Hardware Module Requirements</h2>
+<ul>
+<li>All Basic Requirements</li>
+<li>Generic Output i.e.: pin on/off, serial commands, RS485 commands, PWM commands.</li>
+<li>Command Receipt Acknowledgement</li>
+<li>Command Complete Acknowledgement</li>
+</ul>
 
         </div>
     </div>

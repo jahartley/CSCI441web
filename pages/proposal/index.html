@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-pt-20">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8">
 <title>
     Judson Hartley
 </title>
 
-    <meta name="description" content="CSCI441 Project Proposal"/>
+    <meta name="description" content="CSCI441 Project Proposal">
 
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/css/tailwind.css?v=1726078450491" />
+<link rel="stylesheet" href="/CSCI441web/css/tailwind.css?v=1726206264767">
 
     </head>
     <!-- Google tag (gtag.js) 
@@ -22,7 +22,7 @@
 
     gtag('config', 'G-8JZFNC9XSF');
 </script> -->
-    <body class="" data-theme=synthwave>
+    <body class="" data-theme="synthwave">
         <div>
             <div class="bg-base-100 drawer">
                 <input id="drawer" type="checkbox" class="drawer-toggle">
@@ -34,18 +34,19 @@
       <div class="navbar-start">
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg>
           </div>
-          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-100 shadow rounded-box w-52"><li><a href="/pages/proposal/" class="btn btn-ghost text-xl">Proposal</a></li>
-              <li><a href="/pages/about" class="btn btn-ghost text-xl">About</a></li></ul>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-100 shadow rounded-box w-52"><li><a href="/CSCI441web/pages/proposal/" class="btn btn-ghost text-xl">Proposal</a></li>
+              <li><a href="/CSCI441web/pages/about/" class="btn btn-ghost text-xl">About</a></li><li><a href="/CSCI441web/pages/requirements/" class="btn btn-ghost text-xl">Requirements</a></li>
+              <li><a href="/CSCI441web/pages/about/" class="btn btn-ghost text-xl">About</a></li></ul>
         </div>
-        <a href="/" class="btn btn-ghost text-xl">Home</a>
+        <a href="/CSCI441web/" class="btn btn-ghost text-xl">Home</a>
       </div>
       <div class="navbar-center hidden md:flex">
-        <ul class="menu menu-horizontal px-1"><li><a href="/pages/proposal/" class="btn btn-ghost text-xl">Proposal</a></li></ul>
+        <ul class="menu menu-horizontal px-1"><li><a href="/CSCI441web/pages/proposal/" class="btn btn-ghost text-xl">Proposal</a></li><li><a href="/CSCI441web/pages/requirements/" class="btn btn-ghost text-xl">Requirements</a></li></ul>
       </div>
       <div class="navbar-end hidden md:flex">
-        <a href="/pages/about" class="btn btn-ghost text-xl">About</a>
+        <a href="/CSCI441web/pages/about/" class="btn btn-ghost text-xl">About</a>
       </div>
     </div>
   </div>
@@ -55,7 +56,7 @@
                             
 
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto relative prose prose-sm md:prose-base">
-    <div class="hidden md:block sticky top-16 h-fit tableOfContents" data-table-of-contents>
+    <div class="hidden md:block sticky top-16 h-fit tableOfContents" data-table-of-contents="">
         <div class="overflow-auto h-[calc(100vh-128px)] mt-2 mb-2">
             <h3>Table of Contents:</h3>
             <nav class="toc">
@@ -68,12 +69,30 @@
             		</li>
 
                     <li><a href="#team-profile">Team Profile</a>
+            
+                <ol>
+                    
+                    <li><a href="#judson-hartley">Judson Hartley</a>
+            		</li>
+                </ol>
             		</li>
 
                     <li><a href="#proposed-project-description">Proposed Project Description</a>
+            
+                <ol>
+                    
+                    <li><a href="#current-practice">Current Practice</a>
             		</li>
 
-                    <li><a href="#plan-of-work-and-product-ownership">Plan of work and product ownership</a>
+                    <li><a href="#envisioned-system">Envisioned System</a>
+            		</li>
+
+                    <li><a href="#functional-features">Functional Features</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#plan-of-work-and-product-ownership">Plan of work and Product Ownership</a>
             		</li>
                 </ol>
             </nav>
@@ -83,27 +102,58 @@
         <div class="prose prose-sm md:prose-base w-full max-w-fit flex-grow my-10">
             <h1 id="csci441-project-proposal" tabindex="-1">CSCI441 Project Proposal</h1>
 <h2 id="whole-house-combined-hvac-system" tabindex="-1">Whole House Combined HVAC System</h2>
+<p>The acronym HVAC stands for Heating, Ventilation, and Air Conditioning. While almost all houses in the U.S have a “HVAC” system, usually there is minimal coordination between the “V” and the “H” and “AC” parts. In most houses, the ventilation consists of a few bathroom fans, and if you are lucky a kitchen range vent fan that actually blows outside. When you run your bathroom vent fan, or your clothes dryer, it takes air from inside your house, and blows it outside. Your house doesn’t deflate like a ballon, and clearly you don’t run out of air inside your house, so that means your house is replacing the air that you blew out with air from outside. Where does it come in at? Is it filtered or otherwise conditioned? As most houses do a fairly good job of containing the air they have inside, ever thought about your indoor air quality? Ever had a VOC (volatile organic compounds), CO2 or radon gas sensor running in your bedroom?</p>
+<p>This project is mostly about creating small independent sensors and controllers that can be leveraged to make a house’s ventilation system work with its heating and air conditioning, and provide vastly improved indoor air quality and energy efficiency for its occupants. These sensors need not be expensive, or difficult to setup and use, and can be used to bring dramatic improvement to your indoor air quality.</p>
 <h2 id="website" tabindex="-1">Website</h2>
+<p>The project will have a few GitHub repositories, some needing a few branches. It will also have a documentation website, currently live at <a href="https://jahartley.github.io/CSCI441web/">jahartley.github.io/CSCI441web/</a>.</p>
 <h2 id="team-profile" tabindex="-1">Team Profile</h2>
+<h3 id="judson-hartley" tabindex="-1">Judson Hartley</h3>
+<p>Qualifications and Strengths</p>
 <ul>
-<li>qualifications and strengths.</li>
+<li>Familiar with docker, Linux networking, network design, NodeJS/JavaScript, C++ and microcontroller programing and debugging, HVAC systems etc.</li>
+<li>Designed and had various circuit boards produced, including circuit boards with Atmel AVR microcontrollers to control pool equipment</li>
+<li>Have all equipment necessary to prototype and test the hardware for this project on hand, to include various sensors, microcontrollers, soldering equipment and oscilloscopes for diagnostics.</li>
+<li>Have servers at my home to host all required software, in addition to a few Raspberry PI’s that could run the backend and user interface stack, and have put most of the stack containers in AWS environments</li>
+<li>ASE Master Mechanic provides background for automotive style sensors and electronics diagnostics (automotive sensors are both inexpensive and designed for hot environments, with excessive vibration and electromagnetic noise from ignition systems)</li>
+<li>EPA 609 certified for mobile air conditioning environmental practices</li>
 </ul>
 <h2 id="proposed-project-description" tabindex="-1">Proposed Project Description</h2>
+<h3 id="current-practice" tabindex="-1">Current Practice</h3>
+<p>Currently, the average homeowner does not have any clue as to their indoor air quality. Their HVAC system may have a thermostat that can automatically change from heating to cooling. My current house did not even have that capability. How often do you change your thermostat? Is it because you actually want a different temperature or is it because you feel like it is hotter or colder than you want? Do you know your indoor humidity level? Most people know there are health risks from things like high CO2 levels or radon, but that is the extent of their knowledge. What about wasted money and environmental damage from failing HVAC systems, both in additional energy cost as efficiency plumets from leaking equipment, along with the cost of emergency HVAC repair. How about mold growth in wall cavities from condensation due to air infiltration from running your bathroom vent fan? All of these issues stem from having HVAC equipment that is setup as a disjointed collection of equipment, and the ventilation part is often very deficient.</p>
+<h3 id="envisioned-system" tabindex="-1">Envisioned System</h3>
+<p>The goal is to combine inexpensive modern electronic sensors with a small amount of computing power to enable a home’s HVAC to work as a system and to improve a customer’s living environment. In the automotive sector, the electronics age allowed ever cheaper electronic sensors to drastically improve engine health monitoring (onboard diagnostics), emissions, efficiency and performance. In an initial attempt to curb emissions, restrictive mechanical systems cause the 1973 Chevy 5.7L V-8 engine to make a terrible 145 horsepower, a terrible efficiency of 25.44 HP/L. Today’s Chevrolet 5.3L V-8 has almost the exact same engine configuration, but produces 355 HP (66.99 HP/L) while also having vastly reduced emissions. Porsche’s 2018 911 GT3 RS makes an amazing 128 HP/L, also due to improvements in engine control electronics. It appears that the residential HVAC world has missed this shift to modern electronics.</p>
+<p>The average homeowner’s HVAC has a single temperature sensor, and no monitoring of system performance. If the home has a heat pump air conditioner, then it has two sources of heat for the winter. There is usually no system to determine when to change to the backup. The sensors required to have complete air conditioner monitoring, that would be able to provide both increased efficiency and diagnostic data, to include early warning of poor performance due to a leak, cost less than $200 at retail. The advancement of microcontrollers has drastically reduced the cost of having intelligent systems that can make significantly better decisions than the bimetallic strip mechanical thermostat that lots of houses still use. What about having whole house ventilation, routed through the central air handler, so that air is brought into the house deliberately, filtered, and conditioned, as opposed to having make up air from running a bathroom vent fan just sucking unfiltered, very humid or very dry air in through every crack and crevice in the house’s envelope. Does the CO2 level in your bedroom increase drastically every night while you sleep? CO2 sensors, along with temperature and humidity are very inexpensive. While attempting to monitor my house for radon gas, I found that the CO2 level often gets above 1,000 ppm at night, outside averages about 420 ppm, and while having guests over, and our children sleeping in the room with us reached 3,000 ppm! By first adding sensors, a home owner can make smart choices of what to improve, and places they can save money, for example, by monitoring the pressure drop across their air filter, they can be alerted of when to change the filter, and if system efficiency improvements can be made with a larger, higher quality filter. Ever had very high indoor humidity? An air conditioner is a very large dehumidifier, and can be made to either dehumidify more or less simply by changing the fan speed. How about waking up with painful sinuses because the humidity got way too low? Why doesn’t your HVAC simply just take care of all of these conditions?</p>
+<p>Obviously not all homes will have all of the possible maladies that poor HVAC can cause, but without first collecting data, everyone is just guessing at fixes. By creating a system of sensors that feed a software backend, the data can be used to initially recommend additional or revised equipment configurations, and with control electronics that are designed to work with the increased data available, a much more intelligent and efficient HVAC system can be made using off the shelf equipment, giving a customer peace of mind, and the data to back it up.</p>
+<h3 id="functional-features" tabindex="-1">Functional Features</h3>
 <ul>
-<li>Detailed explanation of proposed project as described in book section 2</li>
-<li>Describe typical customer</li>
-<li>Make a bulletted list of what a user will be able to do with this system (Functional Features)
+<li>Provide data through both graphs and alerts that initially identify issues, and prove solutions are working.</li>
+<li>Provide improved indoor air quality control, to the point that the user never thinks about changing the thermostat, opening a window, getting out a humidifier or dehumidifier.</li>
+<li>Offer either cloud hosted or self-hosted software for those who don’t want everything about them sent who knows where.</li>
+<li>Initial sensor costs should be low enough that customers actually get started, and have a lean towards DIY vs professional installation.</li>
+<li>Systems work on most existing HVAC equipment and provide noticeable or graph-able differences.</li>
+</ul>
+<h2 id="plan-of-work-and-product-ownership" tabindex="-1">Plan of work and Product Ownership</h2>
+<p>Initial plans hinge around standardization of data values, and determining system setup. The initial system design is:</p>
 <ul>
-<li>features should have defined business value to users</li>
-<li>describe specialized hardware</li>
+<li>STM32 with W5500 Ethernet sensor platform for wired sensors, which send to the MQTT broker.
+<ul>
+<li>My personal view is that wired connections for HVAC monitoring will be superior to WIFI, but all firmware will be developed so that it can be easily ported to other microcontrollers like the ESP32, which includes built in WIFI.</li>
 </ul>
 </li>
-</ul>
-<h2 id="plan-of-work-and-product-ownership" tabindex="-1">Plan of work and product ownership</h2>
+<li>MQTT broker to allow data collection and event driven processing</li>
+<li>NodeJS data processing and sensor tracking server
 <ul>
-<li>list and describe items for accomplishment in the short term.</li>
-<li></li>
+<li>Listens for raw sensor data from sensor modules due to limited space on inexpensive microcontroller hardware</li>
+<li>Converts raw data and performs additional data creation i.e. psychrometric air values from temperature and humidity readings.</li>
+<li>Retransmits new MQTT messages with human readable data points</li>
 </ul>
+</li>
+<li>InfluxDB for time series data collection, with data arriving either via the NodeJS server or Home Assistant</li>
+<li>Home Assistant open-source home automation software. Use of off the shelf configurable software which already has the correct type of user interface for viewing data and having controls, which can send commands via MQTT</li>
+<li>STM32 / W5500 control platform to connect to HVAC hardware via relays, serial, PWM or RS485, depending on installed HVAC equipment.</li>
+</ul>
+<p>The following software: MQTT broker, Nodejs data server, InfluxDB, and Home Assistant, will all be deployed via docker containers, which can be hosted on customer equipment (home computer, Raspberry Pi, old laptop…) or in a cloud setting.</p>
+<p>Initial focus will be on the STM32 sensor platform, basic functionality of the NodeJS data server, and data standardization.</p>
 
         </div>
     </div>
